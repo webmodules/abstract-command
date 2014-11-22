@@ -51,7 +51,7 @@ describe('AbstractCommand', function () {
 
     describe('queryState()', function () {
 
-      it('should throw an Error', function () {
+      it('should return `false`', function () {
         div = document.createElement('div');
         div.innerHTML = '<p>hello</p><p>world!</p>';
         div.setAttribute('contenteditable', 'true');
@@ -69,16 +69,14 @@ describe('AbstractCommand', function () {
 
         var c = new AbstractCommand();
 
-        assert.throws(function () {
-          c.queryState();
-        }, /implement/);
+        assert.equal(false, c.queryState());
       });
 
     });
 
     describe('queryEnabled()', function () {
 
-      it('should throw an Error', function () {
+      it('should return `true` with a Selection', function () {
         div = document.createElement('div');
         div.innerHTML = '<p>hello</p><p>world!</p>';
         div.setAttribute('contenteditable', 'true');
@@ -96,9 +94,17 @@ describe('AbstractCommand', function () {
 
         var c = new AbstractCommand();
 
-        assert.throws(function () {
-          c.queryEnabled();
-        }, /implement/);
+        assert.equal(true, c.queryEnabled());
+      });
+
+      it('should return `false` without a Selection', function () {
+
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+
+        var c = new AbstractCommand();
+
+        assert.equal(false, c.queryEnabled());
       });
 
     });
