@@ -63,12 +63,12 @@ class AbstractCommand implements Command {
     throw new Error('implement _execute()!');
   }
 
-  protected _queryEnabled(range: Range): void {
-    throw new Error('implement _queryEnabled()!');
+  protected _queryEnabled(range: Range): boolean {
+    return !! range;
   }
 
-  protected _queryState(range: Range): void {
-    throw new Error('implement _queryState()!');
+  protected _queryState(range: Range): boolean {
+    return false;
   }
 }
 
