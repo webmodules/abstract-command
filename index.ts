@@ -35,6 +35,9 @@ class AbstractCommand implements Command {
       range = currentRange(selection);
     }
 
+    // if there's no Range at this point, then we can bail
+    if (!range) return;
+
     this._execute(range, value);
 
     if (!hasRange) {
@@ -46,11 +49,13 @@ class AbstractCommand implements Command {
 
   queryEnabled(range?: Range): boolean {
     if (!range) range = currentRange(this.document);
+    if (!range) return false;
     return Boolean(this._queryEnabled(range));
   }
 
   queryState(range?: Range): boolean {
     if (!range) range = currentRange(this.document);
+    if (!range) return false;
     return Boolean(this._queryState(range));
   }
 
