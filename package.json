@@ -1,6 +1,6 @@
 {
   "name": "abstract-command",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Abstract `Command` base class to make implementing custom commands easier",
   "main": "index.js",
   "scripts": {

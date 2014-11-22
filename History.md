@@ -1,4 +1,10 @@
 
+2.0.0 / 2014-11-21
+==================
+
+  * test: update tests for new queryState and queryEnabled default return values
+  * index: add default return values for `queryState()` and `queryEnabled()`
+
 1.1.0 / 2014-11-21
 ==================
 
