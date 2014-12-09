@@ -1,5 +1,5 @@
 abstract-command
-============
+================
 ### Abstract `Command` base class to make implementing custom commands easier
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/abstract-command.svg)](https://saucelabs.com/u/abstract-command)
