@@ -3,6 +3,8 @@ node_js:
 - '0.10'
 env:
   global:
+  - secure: AX/VbNomszTO/WP6JI/gI8zo8KOVEw+5VLsEcWhCmkvKtyOgQWL0SQqsw/0XbxB+NNeKujv5MJD1eqBNcxP5xx5BlXCI0TvhQqQe7Q1zpOigNVnxs6f9vkgFwuWQjpFB5MRELu64SX7ewVDD72eMwET9qSxxz9mnaQaEntUta5s=
+  - secure: DxDwHipeLvthaPFY1Onh/SToGSwnti8r8TSsBk4eKFkV0wG3GblMFNahC0rT0pujF3tjvRRyBBCqp16ISEjdFHIkckbb3/VQDxfYFvREs2DdvHj7hxT3MkW1CAOMqHjMwaByDw65JE/GtMMNDt1SDCsH3qnU2/20cQHQtx5M8IU=
   matrix:
   - BROWSER_NAME=chrome BROWSER_VERSION=latest
   - BROWSER_NAME=chrome BROWSER_VERSION=35
